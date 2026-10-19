@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1 class="name">{{NAME}}</h1>
+    <p class="tagline">{{TAGLINE}}</p>
+    {{TAGLINE_DRAFT}}
+    <nav class="quick" aria-label="바로가기">
+      <ul>
+        <li><a href="#story">이야기</a></li>
+        <li><a href="#numbers">숫자</a></li>
+        <li><a href="#showcase">대표작</a></li>
+        <li><a href="#documents">이력서·문서</a></li>
+        <li><a href="#contact">연락</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="band" id="story" aria-labelledby="story-h">
+    <div class="wrap">
+      <h2 id="story-h">{{STORY_TITLE}}</h2>
+      {{SUMMARY}}
+      {{STORY}}
+      {{QUOTES}}
+    </div>
+  </section>
+
+  <section class="band alt" id="numbers" aria-labelledby="numbers-h">
+    <div class="wrap">
+      <h2 id="numbers-h">숫자로 보는 지금까지의 기록</h2>
+      <p class="lead">개강일(2026-08-11)부터 쌓인 기록에서 뽑은 숫자입니다. 숫자마다 가져온 곳(내 출석 기록, 리추얼 기록, 내 제출 현황)을 적었습니다.</p>
+      {{PAIRING}}
+      {{NUMBERS}}
+    </div>
+  </section>
+
+  <section class="band" id="showcase" aria-labelledby="showcase-h">
+    <div class="wrap">
+      <h2 id="showcase-h">대표작</h2>
+      {{SHOWCASE}}
+    </div>
+  </section>
+
+  <section class="band alt" id="documents" aria-labelledby="documents-h">
+    <div class="wrap">
+      <h2 id="documents-h">이력서·자기소개서·경력기술서</h2>
+      {{DOCUMENTS}}
+    </div>
+  </section>
+
+  <section class="band" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">연락</h2>
+      {{CONTACT}}
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    {{FOOTER}}
+    <p><a href="#top">맨 위로</a></p>
+  </div>
+</footer>
+</body>
+</html>
