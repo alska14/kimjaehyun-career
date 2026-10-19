@@ -59,7 +59,7 @@ def draft_marks():
 
 def draft_banner():
     return ('<p class="draft-banner" role="note">%s <span>노란 배지가 붙은 문장은 AI가 임시로 쓴 것이라 '
-            '작성자가 직접 고칠 문장입니다(이 한 줄 소개 포함).</span></p>' % DRAFT_BADGE)
+            '작성자가 직접 고칠 문장입니다(한 줄 소개와 이야기의 첫·마지막 문장 포함).</span></p>' % DRAFT_BADGE)
 
 
 # ---------- 섹션 ----------
@@ -101,7 +101,7 @@ def story_summary(approved, numbers):
     mins = max(1, round(chars / 600))
     line = ""
     if item and m:
-        line = ("%d월 %d일에 힘들었던 날을 숨기지 않고 적었고, 그다음 날부터 기록이 %s%s 이어졌습니다. "
+        line = ("%d월 %d일에 힘들었던 날의 기록을 남겼고, 그다음 날부터 기록이 %s%s 이어졌습니다. "
                 % (int(m.group(1)), int(m.group(2)), e(fmt_value(item.get("value"))), e(item.get("unit", ""))))
     return ('<p class="summary"><strong>먼저 한 줄로</strong> %s고난, 다시 일어난 날, 더 나아진 지금 순서로 읽습니다 '
             '(약 %d자, 읽는 데 %d분 안팎).</p>' % (line, round(chars, -2), mins))
