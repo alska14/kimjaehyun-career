@@ -237,6 +237,11 @@ def file_exists(site_dir, rel):
 
 def render_showcase(showcase, site_dir):
     out = []
+    eng = showcase.get("engine") or {}
+    if eng:
+        out.append('<div class="slot"><h3>%s</h3>%s</div>' % (
+            e(eng.get("title", "")),
+            "".join("<p>%s</p>" % e(t) for t in eng.get("lines", []))))
     paper = showcase.get("paper") or {}
     title = paper.get("title") or "10번 논문"
     url = safe_url(paper.get("url"))
