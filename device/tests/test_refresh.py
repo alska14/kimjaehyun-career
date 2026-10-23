@@ -85,9 +85,9 @@ class RefreshTest(unittest.TestCase):
         ids = {i["id"] for i in self.numbers["items"]}
         self.assertIn(sp["number_id"], ids)
         self.assertEqual((sp["scene_date"], sp["next_day_date"]), ("2026-08-25", "2026-08-26"))
-        self.assertIn("타이레놀", sp["scene_quote"])
+        self.assertIn("코딩이 어려워서", sp["scene_quote"])
         values = self.values_by_date()
-        self.assertIn(sp["scene_quote"], values["2026-08-25"])
+        self.assertIn(sp["scene_quote"], " ".join(values["2026-08-25"]))
         self.assertIn(sp["next_day_quote"], values["2026-08-26"])
 
     def test_c_five_per_ability(self):

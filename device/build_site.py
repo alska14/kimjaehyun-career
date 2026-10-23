@@ -104,7 +104,7 @@ def story_summary(approved, numbers):
         line = ("%d월 %d일에 힘들었던 날의 기록을 남겼고, 그다음 날부터 기록이 %s%s 이어졌습니다. "
                 % (int(m.group(1)), int(m.group(2)), e(fmt_value(item.get("value"))), e(item.get("unit", ""))))
     return ('<p class="summary"><strong>먼저 한 줄로</strong> %s고난, 다시 일어난 날, 더 나아진 지금 순서로 읽습니다 '
-            '(약 %d자, 읽는 데 %d분 안팎).</p>' % (line, round(chars, -2), mins))
+            '(약 %d자, 이야기만 읽는 데 %d분 안팎).</p>' % (line, round(chars, -2), mins))
 
 
 def render_quotes(approved_ids, candidates):

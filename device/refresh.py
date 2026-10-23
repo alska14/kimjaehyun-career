@@ -249,10 +249,11 @@ def compute_numbers(ritual, attendance, submissions, inputs):
 
     scene_pairs = []
     num_id = next((i["id"] for i in items if i["label"] == STREAK_LABEL), None)
-    sq = pick(SCENE_DATE, "강점을 위해 노력하고 생각한 것")
+    sq = pick(SCENE_DATE, "감사일기")
+    sq = sq.split(" — ")[0].strip() if sq else sq
     nq = pick(NEXT_DATE, "오늘의 첫 행동")
     if sq and nq and num_id:
-        scene_pairs.append({"scene_date": SCENE_DATE, "scene_field": "강점을 위해 노력하고 생각한 것",
+        scene_pairs.append({"scene_date": SCENE_DATE, "scene_field": "감사일기",
                             "number_id": num_id, "scene_quote": sq,
                             "next_day_date": NEXT_DATE, "next_day_field": "오늘의 첫 행동",
                             "next_day_quote": nq})
