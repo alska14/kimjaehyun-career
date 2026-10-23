@@ -93,15 +93,16 @@
       ]
     },
     "paper": {
-      "title": "10번 논문",
-      "status": "자리 마련",
+      "title": "10번 논문 「언어모델의 정답률과 추가 검토 요청의 일치와 불일치」",
+      "status": "문서 파일",
       "url": "",
-      "file": ""
+      "file": "docs/paper.docx"
     },
     "app": {
-      "title": "13번 앱",
-      "status": "자리 마련",
-      "eta": "13번 과제를 마친 뒤 추가"
+      "title": "13번 앱 · 검토 신호 점검기",
+      "status": "공개 링크",
+      "url": "https://alska14.github.io/review-signal-app/",
+      "sentence": "이 앱은 AI 답변을 업무에 쓰는 사람이, AI가 붙인 '다시 검토 필요' 표시가 실제 오답을 얼마나 가려냈는지 내 기록 몇 줄로 계산해 보도록 돕습니다."
     }
   },
   "contact": {

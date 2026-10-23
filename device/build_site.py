@@ -258,8 +258,9 @@ def render_showcase(showcase, site_dir):
         out.append('<div class="slot empty"><h3>%s</h3><p><span class="wait">준비 중</span> 이 자리에 논문을 올릴 예정입니다. 링크나 문서 파일이 생기면 바로 열리게 합니다.</p></div>' % e(title))
     app = showcase.get("app") or {}
     if safe_url(app.get("url")):
-        out.append('<div class="slot"><h3>%s</h3><p><a href="%s">앱 열기</a></p></div>'
-                   % (e(app.get("title") or "13번 앱"), e(safe_url(app["url"]))))
+        sent = ("<p>%s</p>" % e(app["sentence"])) if app.get("sentence") else ""
+        out.append('<div class="slot"><h3>%s</h3>%s<p><a href="%s">앱 열기</a> (로그인 없이 열리는 링크)</p></div>'
+                   % (e(app.get("title") or "13번 앱"), sent, e(safe_url(app["url"]))))
     else:
         out.append('<div class="slot empty"><h3>%s</h3><p><span class="wait">예정</span> %s</p></div>'
                    % (e(app.get("title") or "13번 앱"), e(app.get("eta") or "13번 과제를 마친 뒤 추가")))
